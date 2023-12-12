@@ -1,6 +1,10 @@
 import { HOME_ASSISTANT, WAKE_PASSWORD } from "$env/static/private";
 import type { RequestHandler } from "@sveltejs/kit";
 
+export const GET: RequestHandler = async () => {
+    return new Response("This is the wake API", { status: 200 });
+}
+
 export const POST: RequestHandler = async ({ request }) => {
     const body = await request.json();
     if (!body) return new Response("Request body is missing", { status: 400 });
