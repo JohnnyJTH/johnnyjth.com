@@ -10,6 +10,7 @@ const config = {
       },
       textColor: {
         "bl-primary": "#6ef582",
+        "bl-secondary": "#73a7ff",
       },
       borderColor: {
         "bl-primary": "#6ef582",

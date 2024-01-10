@@ -17,6 +17,7 @@
                 // @ts-ignore -- ^^^ release_notes is not null
                 changes: version.release_notes["en-US"]
                     .replaceAll("- ", "")
+                    .replaceAll("<a ", "<a target='_blank' ")
                     .split("\n")
                     .filter((line) => line.trim().length > 0),
             }));
@@ -75,7 +76,9 @@
                     <h3 class="text-2xl font-bold tracking-tight">v{entry.version}</h3>
                     <ul class="mt-4 list-disc list-inside space-y-2">
                         {#each entry.changes as change}
-                            <li>{change}</li>
+                            <li class="[&>a]:underline [&>a]:text-bl-secondary">
+                                {@html change}
+                            </li>
                         {/each}
                     </ul>
                 </div>
