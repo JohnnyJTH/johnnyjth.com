@@ -10,3 +10,5 @@
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#94f7a3" />
 </svelte:head>
+
+<slot />
